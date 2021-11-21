@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Режим без ограничений NSudo | NSudo</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2582D3">
+    <meta name="description" content="Инструментарий системного администрирования">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="M2-Team">
+    <meta name="keywords" content="trustedinstaller,system,session,windows,token,integritylevel,privileges,nsudo,administration,process,devilmode,bypass,accesscheck,ntapi,launcher">
+    <meta name="theme-color" content="#2582D3">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="Copyright" content="Copyright M2-Team All Rights Reserved.">
+    
+    <link rel="preload" href="/assets/css/0.styles.ab23c1ca.css" as="style"><link rel="preload" href="/assets/js/app.81275fc6.js" as="script"><link rel="preload" href="/assets/js/2.3640568c.js" as="script"><link rel="preload" href="/assets/js/3.34c9456c.js" as="script"><link rel="preload" href="/assets/js/21.cc00a36e.js" as="script"><link rel="prefetch" href="/assets/js/10.4c7210ee.js"><link rel="prefetch" href="/assets/js/11.e8cebfe6.js"><link rel="prefetch" href="/assets/js/12.bfb9665c.js"><link rel="prefetch" href="/assets/js/13.5d340ca7.js"><link rel="prefetch" href="/assets/js/14.5abf638a.js"><link rel="prefetch" href="/assets/js/15.0734ace7.js"><link rel="prefetch" href="/assets/js/16.a1e917aa.js"><link rel="prefetch" href="/assets/js/17.9a9f15f1.js"><link rel="prefetch" href="/assets/js/18.0638045e.js"><link rel="prefetch" href="/assets/js/19.ff019ba9.js"><link rel="prefetch" href="/assets/js/20.03133361.js"><link rel="prefetch" href="/assets/js/22.ccf151e6.js"><link rel="prefetch" href="/assets/js/23.9c7f5fae.js"><link rel="prefetch" href="/assets/js/24.81dfc738.js"><link rel="prefetch" href="/assets/js/25.98b72cbc.js"><link rel="prefetch" href="/assets/js/26.558f745c.js"><link rel="prefetch" href="/assets/js/27.ca9a21ef.js"><link rel="prefetch" href="/assets/js/28.b417f702.js"><link rel="prefetch" href="/assets/js/29.b5f19367.js"><link rel="prefetch" href="/assets/js/30.3633c3c7.js"><link rel="prefetch" href="/assets/js/31.cb9118f0.js"><link rel="prefetch" href="/assets/js/32.e8a04531.js"><link rel="prefetch" href="/assets/js/33.913abb6a.js"><link rel="prefetch" href="/assets/js/34.cffd77fe.js"><link rel="prefetch" href="/assets/js/35.d124db14.js"><link rel="prefetch" href="/assets/js/36.158fb458.js"><link rel="prefetch" href="/assets/js/4.acd61eea.js"><link rel="prefetch" href="/assets/js/5.f7dead5d.js"><link rel="prefetch" href="/assets/js/6.a14574f6.js"><link rel="prefetch" href="/assets/js/7.6676532e.js"><link rel="prefetch" href="/assets/js/8.795fe9a4.js"><link rel="prefetch" href="/assets/js/9.6da49e63.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ab23c1ca.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/ru-ru/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="NSudo" class="logo"> <span class="site-name can-hide">NSudo</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/ru-ru/" class="nav-link">
+  Главная страница
+</a></div><div class="nav-item"><a href="/ru-ru/Download.html" class="nav-link">
+  Скачать
+</a></div><div class="nav-item"><a href="/ru-ru/Support.html" class="nav-link">
+  Поддержка
+</a></div><div class="nav-item"><a href="/ru-ru/docs/" class="nav-link router-link-active">
+  Документация
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Языки</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Языки</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/en-us/docs/DevilMode.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-hans/docs/DevilMode.html" class="nav-link">
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/zh-hant/docs/DevilMode.html" class="nav-link">
+  繁體中文
+</a></li><li class="dropdown-item"><!----> <a href="/ru-ru/docs/DevilMode.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Русский
+</a></li></ul></div></div> <a href="https://github.com/m2team/NSudo" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/ru-ru/" class="nav-link">
+  Главная страница
+</a></div><div class="nav-item"><a href="/ru-ru/Download.html" class="nav-link">
+  Скачать
+</a></div><div class="nav-item"><a href="/ru-ru/Support.html" class="nav-link">
+  Поддержка
+</a></div><div class="nav-item"><a href="/ru-ru/docs/" class="nav-link router-link-active">
+  Документация
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Языки</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Языки</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/en-us/docs/DevilMode.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-hans/docs/DevilMode.html" class="nav-link">
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/zh-hant/docs/DevilMode.html" class="nav-link">
+  繁體中文
+</a></li><li class="dropdown-item"><!----> <a href="/ru-ru/docs/DevilMode.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Русский
+</a></li></ul></div></div> <a href="https://github.com/m2team/NSudo" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/ru-ru/docs/" aria-current="page" class="sidebar-link">Использование</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Документация</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/ru-ru/docs/Changelog.html" class="sidebar-link">Обновления</a></li><li><a href="/ru-ru/docs/DevilMode.html" aria-current="page" class="active sidebar-link">Режим без ограничений NSudo</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ru-ru/docs/DevilMode.html#почему-я-создал-режим-без-ограничении-nsudo" class="sidebar-link">Почему я создал режим без ограничений NSudo</a></li><li class="sidebar-sub-header"><a href="/ru-ru/docs/DevilMode.html#происхождение-режима-без-ограничении-nsudo" class="sidebar-link">Происхождение режима без ограничений NSudo</a></li><li class="sidebar-sub-header"><a href="/ru-ru/docs/DevilMode.html#список-подключенных-системных-вызовов-ядра-windows-nt" class="sidebar-link">Список подключенных системных вызовов ядра Windows NT</a></li><li class="sidebar-sub-header"><a href="/ru-ru/docs/DevilMode.html#как-использовать-режим-без-ограничении-nsudo" class="sidebar-link">Как использовать режим без ограничений NSudo</a></li></ul></li><li><a href="/ru-ru/docs/SharedLibrary.html" class="sidebar-link">Общая библиотека NSudo</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="режим-без-ограничении-nsudo"><a href="#режим-без-ограничении-nsudo" class="header-anchor">#</a> Режим без ограничений NSudo</h1> <p>Режим без ограничений NSudo - это элегантное решение для разработчиков,
+которые хотят обойти проверки доступа к файлам и реестру. Он подключает некоторые
+системные вызовы ядра Windows NT к файлам и реестру через Microsoft Detours, поэтому
+разработчикам нужно только загрузить NSudoDM.dll в свои приложения, прежде чем пользоваться ими.</p> <p>Режим без ограничений NSudo требует только привилегии администратора. Поэтому разработчикам
+необходимо запускать свои приложения от имени администратора, если они хотят его использовать.</p> <p>Как создатель проекта NSudo, я думаю, что режим без ограничений NSudo может
+заменить инструменты, подобные NSudo, в большинстве случаев. NSudo 8.0 будет поддерживать
+запуск приложений в режиме без ограничений NSudo, а режим без ограничений Dism++ будет перенесён с
+режимом без ограничений NSudo. Так что NSudo будет более профессиональным ПО в будущем,
+потому что я не хочу, чтобы NSudo был заменён режимом без ограничений NSudo, хаха.</p> <h2 id="почему-я-создал-режим-без-ограничении-nsudo"><a href="#почему-я-создал-режим-без-ограничении-nsudo" class="header-anchor">#</a> Почему я создал режим без ограничений NSudo</h2> <p>Разработчикам трудно интегрировать общую библиотеку NSudo, поскольку она раскрывает
+много деталей о модели безопасности Windows и выглядит как библиотека низкого уровня.
+Я не думаю, что только предоставление общей библиотеки NSudo подходит разработчикам, которые
+хотят обойти проверки доступа к файлам и реестру. Поэтому я создал режим без ограничений NSudo.</p> <h2 id="происхождение-режима-без-ограничении-nsudo"><a href="#происхождение-режима-без-ограничении-nsudo" class="header-anchor">#</a> Происхождение режима без ограничений NSudo</h2> <p>Режим без ограничений NSudo основан на режиме без ограничений Dism++
+или по-китайски &quot;Dism++ 春哥附体&quot;. Я перенёс режим без ограничений Dism++, добавил
+несколько новых возможностей и сделал его исходный код доступным в репозитории NSudo на GitHub.</p> <h2 id="список-подключенных-системных-вызовов-ядра-windows-nt"><a href="#список-подключенных-системных-вызовов-ядра-windows-nt" class="header-anchor">#</a> Список подключенных системных вызовов ядра Windows NT</h2> <table><thead><tr><th>Имя</th> <th>Происхождение</th></tr></thead> <tbody><tr><td>NtCreateKey</td> <td>Режим без ограничений Dism++</td></tr> <tr><td>NtCreateKeyTransacted</td> <td>Режим без ограничений NSudo</td></tr> <tr><td>NtOpenKey</td> <td>Режим без ограничений Dism++. Расширен в режиме без ограничений NSudo.</td></tr> <tr><td>NtOpenKeyTransacted</td> <td>Режим без ограничений NSudo</td></tr> <tr><td>NtOpenKeyEx</td> <td>Режим без ограничений Dism++</td></tr> <tr><td>NtOpenKeyTransactedEx</td> <td>Режим без ограничений NSudo</td></tr> <tr><td>NtCreateFile</td> <td>Режим без ограничений Dism++</td></tr> <tr><td>NtOpenFile</td> <td>Режим без ограничений Dism++</td></tr></tbody></table> <h2 id="как-использовать-режим-без-ограничении-nsudo"><a href="#как-использовать-режим-без-ограничении-nsudo" class="header-anchor">#</a> Как использовать режим без ограничений NSudo</h2> <p>Вы можете включить его через LoadLibrary и отключить через FreeLibrary.
+Вот демонстрационный код.</p> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>IO</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Runtime<span class="token punctuation">.</span>InteropServices</span><span class="token punctuation">;</span>
+
+<span class="token keyword">namespace</span> <span class="token namespace">Demo</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">class</span> <span class="token class-name">Program</span>
+    <span class="token punctuation">{</span>
+        <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">DllImport</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token string">&quot;kernel32.dll&quot;</span><span class="token punctuation">,</span> CharSet <span class="token operator">=</span> CharSet<span class="token punctuation">.</span>Unicode<span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+        <span class="token keyword">static</span> <span class="token keyword">extern</span> <span class="token return-type class-name">IntPtr</span> <span class="token function">LoadLibrary</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> lpLibFileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">DllImport</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token string">&quot;kernel32.dll&quot;</span><span class="token punctuation">,</span> SetLastError <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+        <span class="token punctuation">[</span><span class="token attribute"><span class="token target keyword">return</span><span class="token punctuation">:</span> <span class="token class-name">MarshalAs</span><span class="token attribute-arguments"><span class="token punctuation">(</span>UnmanagedType<span class="token punctuation">.</span>Bool<span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+        <span class="token keyword">static</span> <span class="token keyword">extern</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">FreeLibrary</span><span class="token punctuation">(</span><span class="token class-name">IntPtr</span> hLibModule<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token class-name">IntPtr</span> NSudoDevilModeModuleHandle <span class="token operator">=</span> <span class="token function">LoadLibrary</span><span class="token punctuation">(</span>
+                <span class="token string">@&quot;E:\GitHub\M2Team\NSudo\Output\Release\x64\NSudoDevilMode.dll&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token punctuation">{</span>
+                <span class="token class-name">DirectoryInfo</span> Folder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">DirectoryInfo</span><span class="token punctuation">(</span>
+                <span class="token string">@&quot;C:\System Volume Information&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name">FileInfo</span> File <span class="token keyword">in</span> Folder<span class="token punctuation">.</span><span class="token function">GetFiles</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>File<span class="token punctuation">.</span>FullName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token function">FreeLibrary</span><span class="token punctuation">(</span>NSudoDevilModeModuleHandle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token punctuation">{</span>
+                <span class="token class-name">DirectoryInfo</span> Folder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">DirectoryInfo</span><span class="token punctuation">(</span>
+                <span class="token string">@&quot;C:\System Volume Information&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name">FileInfo</span> File <span class="token keyword">in</span> Folder<span class="token punctuation">.</span><span class="token function">GetFiles</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>File<span class="token punctuation">.</span>FullName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+
+            Console<span class="token punctuation">.</span><span class="token function">ReadKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/m2team/NSudo/edit/master/Website/ru-ru/docs/DevilMode.md" target="_blank" rel="noopener noreferrer">Изменить эту страницу на GitHub</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Последнее изменение:</span> <span class="time">2021/11/18 18:53</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/ru-ru/docs/Changelog.html" class="prev">
+        Обновления
+      </a></span> <span class="next"><a href="/ru-ru/docs/SharedLibrary.html">
+        Общая библиотека NSudo
+      </a>
+      →
+    </span></p></div> <div class="page-footer"><ul class="inner"><li>
+      Copyright © <a href="https://m2team.org/" target="_blank" rel="noopener noreferrer"> M2-Team </a> and Contributors. All rights reserved.
+    </li> <li><a href="https://github.com/M2Team/NSudo/blob/master/License.md" target="_blank" rel="noopener noreferrer">MIT</a> Licensed
+    </li> <li><a href="https://github.com/M2Team/NSudo/issues" target="_blank" rel="noopener noreferrer">GitHub Issue </a></li><li><a href="https://github.com/M2Team/NSudo/blob/master/People.md" target="_blank" rel="noopener noreferrer">Благодарности</a></li></ul></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.81275fc6.js" defer></script><script src="/assets/js/2.3640568c.js" defer></script><script src="/assets/js/3.34c9456c.js" defer></script><script src="/assets/js/21.cc00a36e.js" defer></script>
+  </body>
+</html>
